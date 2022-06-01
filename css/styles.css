@@ -12251,10 +12251,6 @@ body {
   height: 100%;
 }
 
-.page-section {
-  padding: 1rem 0;
-}
-
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75) !important;
 }
@@ -12281,9 +12277,14 @@ hr.divider-light {
 }
 
 #mainNav {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  /* background-color: #fff; */
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+  background-color: transparent;
   transition: background-color 0.2s ease;
+}
+
+#mainNav.navbar-shrink {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 #mainNav .navbar-brand {
@@ -12334,11 +12335,6 @@ hr.divider-light {
 
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
-  }
-
-  #mainNav.navbar-shrink {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    /* background-color: #fff; */
   }
 
   #mainNav.navbar-shrink .navbar-brand {
@@ -12466,6 +12462,10 @@ header.masthead .h1 {
 
 
 /* ROSEFILMM CUSTOM CSS */
+.page-section {
+  padding: 1rem 0;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -12508,6 +12508,10 @@ header.masthead .h1 {
 }
 
 @media (max-width: 768px) {
+  .page-section {
+    padding: 0.25rem 0;
+  }
+
   .img-fluid {
     max-width: 100%;
     height: 100%;
@@ -12517,6 +12521,10 @@ header.masthead .h1 {
 }
 
 @media (max-width: 425px) {
+  .page-section {
+    padding: 0.25rem 0;
+  }
+
   .img-fluid {
     max-width: 100%;
     max-height: 100%;
