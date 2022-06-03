@@ -6,11 +6,70 @@
 //
 // Scripts
 // 
+const projectTag = "project-";
+const titleTag = "-title";
+const subtitleTag = "-subtitle";
+
 window.addEventListener('DOMContentLoaded', event => {
-    // Activate SimpleLightbox plugin for portfolio items
-    for (i in projects) {
-        var elems = '#portfolio a.project-' + i.toString();
-        new SimpleLightbox(elems, { captionSelector: "self", captions: false });
+    const numProjects = Object.keys(projects).length;
+    const needsCenter = numProjects % 2;
+    let i = 0;
+    for (id in projects) {
+        if (needsCenter) {
+            if (i === (numProjects - 1).toString()) {
+                addToGallery(id, 'center');
+            } else if (i % 2) {
+                addToGallery(id, 'right');
+            } else {
+                addToGallery(id, 'left');
+            }
+        } else {
+            if (i % 2) {
+                addToGallery(id, 'right');
+            } else {
+                addToGallery(id, 'left');
+            }
+        }
+        var simpleLightboxElements = `#portfolio a.project-${id}`;
+        // Activate SimpleLightbox plugin for portfolio items
+        new SimpleLightbox(simpleLightboxElements, { captionSelector: "self", captions: false });
+        i += 1;
+    }
+
+    function addToGallery(index, location) {
+        var gallery;
+        var thumbnail = createProject(index);
+        // createImageGallery(index);
+        switch (location) {
+            case 'center':
+                gallery = document.getElementById("gallery-center");
+                break;
+            case 'right':
+                gallery = document.getElementById("gallery-right");
+                break;
+            default:
+                gallery = document.getElementById("gallery-left");
+                break;
+        }
+        gallery.appendChild(thumbnail);
+    }
+
+    function createProject(index) {
+        var project = document.createElement("div");
+        project.id = `project-${index}`;
+        project.classList.add("col-auto");
+        
+        var thumbnail = document.createElement("a");
+        thumbnail.classList.add("portfolio-box",`project-${index}`);
+        thumbnail.href = `assets/img/portfolio/fullsize/${index}/img_1.jpg`;
+        thumbnail.title = "CATEGORY";
+        thumbnail.innerHTML = `<img class="img-fluid" src="assets/img/portfolio/thumbnails/${index}.jpg" alt="..." />
+                                    <div class="portfolio-box-caption">
+                                        <div class="project-category text-white-50" id="project-${index}-title"></div>
+                                        <div class="project-name" id="project-${index}-subtitle"></div>
+                                    </div>`
+        project.appendChild(thumbnail);
+        return project;
     }
 
     function loadNavigationBar() {
@@ -36,18 +95,15 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     function loadPortfolio() {
-        const project = "project-";
-        const title = "-title";
-        const subtitle = "-subtitle";
         for (i in projects) {
             let html_title = getTitle(i);
             let html_subtitle = getSubtitle(i);
             if (html_title) {
-                var project_title = project + i.toString() + title;
+                var project_title = projectTag + i.toString() + titleTag;
                 makeElementText(html_title, project_title);
             }
             if (html_subtitle) {
-                var project_subtitle = project + i.toString() + subtitle;
+                var project_subtitle = projectTag + i.toString() + subtitleTag;
                 makeElementText(html_subtitle, project_subtitle);
             }
         }
@@ -64,7 +120,7 @@ window.addEventListener('DOMContentLoaded', event => {
         loadBiography();
         loadContactInfo();
         loadFooter();
-        loadPortfolio();
+        // loadPortfolio();
     }
     loadContents();
 
