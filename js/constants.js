@@ -56,7 +56,7 @@ const projects = {
     },
     "graduation_22": {
         title: "project 5 title",
-        subtitile: "project 5 title"
+        subtitle: "project 5 title"
     }//,
     /* 
     ^^^ REMOVE THE "//" IN FRONT OF THE COMMA

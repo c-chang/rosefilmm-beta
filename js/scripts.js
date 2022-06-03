@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', event => {
         loadBiography();
         loadContactInfo();
         loadFooter();
-        // loadPortfolio();
+        loadPortfolio();
     }
     loadContents();
 
