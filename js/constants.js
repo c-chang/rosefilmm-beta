@@ -66,7 +66,7 @@ const projects = {
     */
     //6: {
     //    title: "",
-    //    subtitile: ""
+    //    subtitle: ""
     //}//,
     /* ^^^ KEEP THE "//" IN FRONT OF THE COMMA UNTIL READY TO ADD 7 
     * REPEAT THIS PROCESS FOR ALL ADDITIONAL GALLERIES
