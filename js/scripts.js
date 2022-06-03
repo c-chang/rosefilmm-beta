@@ -32,13 +32,13 @@ window.addEventListener('DOMContentLoaded', event => {
         }
         var simpleLightboxElements = `#portfolio a.project-${id}`;
         // Activate SimpleLightbox plugin for portfolio items
-        new SimpleLightbox(simpleLightboxElements, { captionSelector: "self", captions: false });
+        new SimpleLightbox(simpleLightboxElements, { captionSelector: "self", captions: showCaptions });
         i += 1;
     }
 
-    function addToGallery(index, location) {
+    function addToGallery(projectId, location) {
         var gallery;
-        var thumbnail = createProject(index);
+        var thumbnail = createProject(projectId);
         // createImageGallery(index);
         switch (location) {
             case 'center':
@@ -54,22 +54,34 @@ window.addEventListener('DOMContentLoaded', event => {
         gallery.appendChild(thumbnail);
     }
 
-    function createProject(index) {
+    function createProject(projectId) {
         var project = document.createElement("div");
-        project.id = `project-${index}`;
+        project.id = `project-${projectId}`;
         project.classList.add("col-auto");
         
         var thumbnail = document.createElement("a");
-        thumbnail.classList.add("portfolio-box",`project-${index}`);
-        thumbnail.href = `assets/img/portfolio/fullsize/${index}/img_1.jpg`;
-        thumbnail.title = "CATEGORY";
-        thumbnail.innerHTML = `<img class="img-fluid" src="assets/img/portfolio/thumbnails/${index}.jpg" alt="..." />
+        thumbnail.classList.add("portfolio-box", `project-${projectId}`);
+        thumbnail.href = `assets/img/portfolio/${projectId}/thumbnail.jpg`;
+        thumbnail.title = projects[projectId].thumbnail ?? "";
+        thumbnail.innerHTML = `<img class="img-fluid" src="assets/img/portfolio/${projectId}/thumbnail.jpg" alt="..." />
                                     <div class="portfolio-box-caption">
-                                        <div class="project-category text-white-50" id="project-${index}-title"></div>
-                                        <div class="project-name" id="project-${index}-subtitle"></div>
+                                        <div class="project-category text-white-50" id="project-${projectId}-title"></div>
+                                        <div class="project-name" id="project-${projectId}-subtitle"></div>
                                     </div>`
         project.appendChild(thumbnail);
+
+        for (const [key, value] of Object.entries(projects[projectId].images)) {
+            project.appendChild(createGalleryItem(key, value, projectId));
+        }
         return project;
+    }
+
+    function createGalleryItem(imageKey, imageCaption, projectIndex) {
+        var item = document.createElement("a");
+        item.classList.add(`project-${projectIndex}`);
+        item.href = `assets/img/portfolio/${projectIndex}/${imageKey}.jpg`;
+        item.title = imageCaption ?? "";
+        return item;
     }
 
     function loadNavigationBar() {
