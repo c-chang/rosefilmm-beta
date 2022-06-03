@@ -67,6 +67,36 @@ const projects = {
             img_5: ""
         }
     },
+    "wedding_2": {
+        title: "project 3 title",
+        subtitle: "project 3 subtitle",
+        thumbnail: "thumbnail image caption",
+        isPortrait: true,
+        images: {
+            img_2: "",
+            img_3: "",
+            img_4: "",
+            img_5: "",
+            img_6: "",
+            img_7: "",
+            img_8: "",
+            img_9: ""
+        }
+    },
+    "graduation_22": {
+        title: "project 5 title",
+        subtitle: "project 5 title",
+        thumbnail: "thumbnail image caption",
+        isPortrait: true,
+        images: {
+            img_2: "",
+            img_3: "",
+            img_4: "",
+            img_5: "",
+            img_6: "",
+            img_7: ""
+        }
+    },
     "wedding_1": {
         title: "project 1 title",
         subtitle: "project 1 subtitle",
@@ -90,21 +120,6 @@ const projects = {
             img_6: ""
         }
     },
-    "wedding_2": {
-        title: "project 3 title",
-        subtitle: "project 3 subtitle",  
-        thumbnail: "thumbnail image caption",
-        images: {
-            img_2: "",
-            img_3: "",
-            img_4: "",
-            img_5: "",
-            img_6: "", 
-            img_7: "",
-            img_8: "",
-            img_9: ""
-        }
-    },
     "wedding_3": {
         title: "project 4 title",
         subtitle: "project 4 subtitle",
@@ -115,19 +130,6 @@ const projects = {
             img_4: "caption",
             img_5: "",
             img_6: ""
-        }
-    },
-    "graduation_22": {
-        title: "project 5 title",
-        subtitle: "project 5 title",
-        thumbnail: "thumbnail image caption",
-        images: {
-            img_2: "",
-            img_3: "",
-            img_4: "",
-            img_5: "",
-            img_6: "",
-            img_7: ""
         }
     }
 };
