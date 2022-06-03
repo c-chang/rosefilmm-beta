@@ -16,6 +16,7 @@
         title: "portraits thumbnail title",    <--- "title" is your KEY. The VALUE shown in all caps light grey is "PORTRAITS THUMBNAIL HERE"
         subtitle: "",                          <--- "subtitle" is your KEY. There is an empty (nothing) subtitle here.
         thumbnail: "",                         <--- "thumbnail" is your KEY. This is the caption for the image you choose as your thumbnail.
+        isPortrait: true,                      <--- [OPTIONAL] set this value if the thumbnail photo is in portrait mode. 
         images: {                              <--- "images" is your KEY. Here you will store the captions for each image.
             img_2: "",                         <--- "img_2" is your KEY. Make sure that this matches with what you are saving your image file as in your assets folder!
                                                         DO NOT include the thumbnail image caption here! That should go under the "thumbnail" field.
