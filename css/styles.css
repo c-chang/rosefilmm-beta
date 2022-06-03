@@ -12519,6 +12519,14 @@ header.masthead .h1 {
   .page-section {
     padding: 0.25rem 0;
   }
+
+  .img-fluid-landscape {
+    padding: 0.25rem 0;
+  }
+
+  .img-fluid-portrait {
+    padding: 0.25rem 0;
+  }
 }
 
 @media (max-width: 425px) {
