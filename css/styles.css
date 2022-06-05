@@ -12539,6 +12539,13 @@ header.masthead .h1 {
   color: var(--light-grey-accent);
 }
 
+.thank-you {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  color: var(--dark-grey-accent);
+}
+
 .connect-icon {
   padding: 0.15rem 0.15rem;
 }

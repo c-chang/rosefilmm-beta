@@ -9,6 +9,7 @@
      const brand_name = "helloworld";          <--- This is how it should look if you wanted the brand_name value to be "helloworld" instead of "rosefilmm".
 *
 ------------------------------------------------------------------------------------ */
+const site_tab = "rosefilmm photos";
 const brand_name = "rosefilmm";
 const navbar_content_1 = "Portfolio";
 const navbar_content_2 = "Contact & Booking";
@@ -24,6 +25,7 @@ const contact_info_email = "Your email";
 const contact_info_phone = "Your phone number";
 const contact_info_message = "Please provide some preliminary information so I can begin brainstorming!";
 const contact_button = "Send Request";
+const thankyou_message = "Request received! We look forward to connecting with you."
 
 /* ------------------------------------------------------------- 
 SETTINGS: 
@@ -34,7 +36,7 @@ Below are settings for showing different things. Change to true if you want to e
     * showFacebook = true;          <--- if you want the Facebook icon to show in the site footer. Make sure you have a valid site link attached to facebookLink! 
     * showTiktok = true;            <--- if you want the TikTok icon to show in the site footer. Make sure you have a valid site link attached to tiktokLink! 
 ------------------------------------------------------------- */
-const showCaptions = false;
+const showCaptions = true;
 
 const showInstagram = true;
 const instagramLink = "https://www.instagram.com/studiosabrina__";
@@ -46,7 +48,7 @@ const showTiktok = false;
 const tiktokLink = "";
 
 const copyright = "Copyright &copy; 2022 - rosefilmm";
-const last_updated = "Last Updated: June 2022 - Cynthia Chang";
+const last_updated = "Last Updated: June 2022";
 
 /* -------------------------------------------------------------
 ADDING IMAGES:
@@ -84,10 +86,10 @@ const projects = {
     "portraits": {
         title: "project 0 title",
         subtitle: "project 0 subtitle",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "web designer's first time in NYC. shot on iPhone 11",
         images: {
-            img_2: "image caption",
-            img_3: "image caption",
+            img_2: "",
+            img_3: "",
             img_4: "",
             img_5: ""
         }
@@ -95,7 +97,7 @@ const projects = {
     "wedding_2": {
         title: "project 3 title",
         subtitle: "project 3 subtitle",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "",
         isPortrait: true,
         images: {
             img_2: "",
@@ -111,7 +113,7 @@ const projects = {
     "graduation_22": {
         title: "Click to see more grad photos!",
         subtitle: "Click to see more grad photos!",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "",
         isPortrait: true,
         images: {
             img_2: "",
@@ -125,7 +127,7 @@ const projects = {
     "wedding_1": {
         title: "project 1 title",
         subtitle: "project 1 subtitle",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "",
         images: {
             img_2: "",
             img_3: "",
@@ -136,7 +138,7 @@ const projects = {
     "family_1": {
         title: "project 2 title",
         subtitle: "project 2 subtitle",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "",
         images: {
             img_2: "",
             img_3: "",
@@ -148,7 +150,7 @@ const projects = {
     "wedding_3": {
         title: "project 4 title",
         subtitle: "project 4 subtitle",
-        thumbnail: "thumbnail image caption",
+        thumbnail: "",
         images: {
             img_2: "",
             img_3: "",

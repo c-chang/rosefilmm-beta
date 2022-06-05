@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>rosefilmm</title>
+    <title></title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
@@ -84,32 +84,36 @@
                     <form class="gform" method="POST"
                         action="https://script.google.com/macros/s/AKfycbwvBuIe0DYvmvCoUtW59xNjDjO4QhJZ899EQ5xVqZPVoez-9TUw6K9_ROAVIm0cMrrVng/exec">
                         <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="name" type="text"
-                                placeholder="Enter your name..." />
-                            <label for="name" id="contact-info-name"></label>
+                        <div class="form-elements">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" name="name" type="text"
+                                    placeholder="Enter your name..." />
+                                <label for="name" id="contact-info-name"></label>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" name="email" type="email"
+                                    placeholder="name@example.com" />
+                                <label for="email" id="contact-info-email"></label>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" name="phone" type="tel"
+                                    placeholder="(123) 456-7890" />
+                                <label for="phone" id="contact-info-phone"></label>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" name="message" type="text"
+                                    placeholder="Enter your message here..." style="height: 10rem"></textarea>
+                                <label for="message" id="contact-info-message"></label>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-xl" id="contact-button" type="submit"></button>
+                            </div>
                         </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="email" type="email"
-                                placeholder="name@example.com" />
-                            <label for="email" id="contact-info-email"></label>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" name="phone" type="tel"
-                                placeholder="(123) 456-7890" />
-                            <label for="phone" id="contact-info-phone"></label>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"></textarea>
-                            <label for="message" id="contact-info-message"></label>
-                        </div>
-                        <div class="d-grid">
-                            <button class="btn btn-primary btn-xl" id="contact-button" type="submit"></button>
-                        </div>
+                        <!-- Submission Confirmation Message -->
+                        <h5 class="mt-0 thank-you" id="thankyou-message"></h5>
                     </form>
                 </div>
             </div>
@@ -138,7 +142,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"
         integrity="sha512-XGiM73niqHXRwBELBEktUKuGXC9yHyaxEsVWvUiCph8yxkaNkGeXJnqs5Ls1RSp4Q+PITMcCy2Dw7HxkzBWQCw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Core theme JS-->
+    <!-- Core JS files-->
+    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/constants.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
