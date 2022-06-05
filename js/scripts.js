@@ -125,6 +125,9 @@ window.addEventListener('DOMContentLoaded', event => {
     function loadFooter() {
         makeElementText(copyright, "copyright");
         makeElementText(last_updated, "last-updated");
+        setSocialMediaIcons(instagramLink, "instagram-icon");
+        setSocialMediaIcons(facebookLink, "facebook-icon");
+        setSocialMediaIcons(tiktokLink, "tiktok-icon");
     }
 
     // Load the dynamic contents
@@ -182,6 +185,19 @@ window.addEventListener('DOMContentLoaded', event => {
     function makeElementText(html, id) {
         let x = document.getElementById(id);
         x.innerHTML = html;
+    }
+
+    function setSocialMediaIcons(addr, id) {
+        let x = document.getElementById(id);
+        if ((id === "instagram-icon" && showInstagram) ||
+            (id === "facebook-icon" && showFacebook) ||
+            (id === "tiktok-icon" && showTiktok)) {
+            if (addr != null && addr.length > 0) {
+                x.href = addr;
+                return;
+            }
+        }
+        x.style.display = "none";
     }
 
     function getTitle(index) {
