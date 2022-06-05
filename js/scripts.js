@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', event => {
         const imgClass = projects[projectId]?.isPortrait ? "img-fluid-portrait" : "img-fluid-landscape";
         thumbnail.classList.add("portfolio-box", `project-${projectId}`);
         thumbnail.href = `assets/img/portfolio/${projectId}/thumbnail.jpg`;
-        thumbnail.title = projects[projectId].thumbnail ?? "";
+        thumbnail.title = projects[projectId]?.thumbnail ?? "";
         thumbnail.innerHTML = `<img class=${imgClass} src="assets/img/portfolio/${projectId}/thumbnail.jpg" alt="..." />
                                     <div class="portfolio-box-caption">
                                         <div class="project-category text-white-50" id="project-${projectId}-title"></div>
@@ -186,14 +186,14 @@ window.addEventListener('DOMContentLoaded', event => {
 
     function getTitle(index) {
         if (projects[index]) {
-            return projects[index].title;
+            return projects[index]?.title ?? "";
         }
         return null;
     }
 
     function getSubtitle(index) {
         if (projects[index]) {
-            return projects[index].subtitle;
+            return projects[index]?.subtitle ?? "";
         }
         return null;
     }

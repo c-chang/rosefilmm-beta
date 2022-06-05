@@ -50,11 +50,14 @@ const contact_info_phone = "Your phone number";
 const contact_info_message = "Please provide some preliminary information so I can begin brainstorming!";
 const contact_button = "Send Request";
 
-/* Chnage to true if you want to show captions on images. */
+/* Chnage to true if you want to show captions on images. NO QUOTATIONS. Keep the semi-colon at the end. */
 const showCaptions = false;
+// const showInstagram = "";
+// const showFacebook = "display:none;"
+// const showTiktok = "display:none;"
 
 const copyright = "Copyright &copy; 2022 - rosefilmm";
-const last_updated = "Last Updated: May 2022 - Cynthia Chang";
+const last_updated = "Last Updated: June 2022 - Cynthia Chang";
 
 const projects = {
     "portraits": {
@@ -85,13 +88,13 @@ const projects = {
         }
     },
     "graduation_22": {
-        title: "project 5 title",
-        subtitle: "project 5 title",
+        title: "Click to see more grad photos!",
+        subtitle: "Click to see more grad photos!",
         thumbnail: "thumbnail image caption",
         isPortrait: true,
         images: {
             img_2: "",
-            img_3: "",
+            img_3: "3rd image caption",
             img_4: "",
             img_5: "",
             img_6: "",
@@ -133,4 +136,12 @@ const projects = {
             img_6: ""
         }
     }
+    // "empty template": {
+    //     title: "".
+    //     subtitle: "",
+    //     thumbnail: "",
+    //     images: {
+    //         sometitle: ""
+    //     }
+    // }
 };
