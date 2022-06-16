@@ -111,8 +111,8 @@ const projects = {
         }
     },
     "graduation_22": {
-        title: "Click to see more grad photos!",
-        subtitle: "Click to see more grad photos!",
+        title: "Graduation",
+        subtitle: "click to see more",
         thumbnail: "",
         isPortrait: true,
         images: {
@@ -126,7 +126,7 @@ const projects = {
     },
     "wedding_1": {
         title: "project 1 title",
-        subtitle: "project 1 subtitle",
+        subtitle: "click to see more",
         thumbnail: "",
         images: {
             img_2: "",
@@ -136,8 +136,8 @@ const projects = {
         }
     },
     "family_1": {
-        title: "project 2 title",
-        subtitle: "project 2 subtitle",
+        title: "family portraits",
+        subtitle: "click to see more",
         thumbnail: "",
         images: {
             img_2: "",
