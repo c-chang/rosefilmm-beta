@@ -84,8 +84,8 @@ For Example:
 ------------------------------------------------------------- */
 const projects = {
     "portraits": {
-        title: "project 0 title",
-        subtitle: "project 0 subtitle",
+        title: "Portraits",
+        subtitle: "click to see more",
         thumbnail: "web designer's first time in NYC. shot on iPhone 11",
         images: {
             img_2: "",
